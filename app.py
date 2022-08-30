@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
 from transformers import DistilBertTokenizerFast
 from transformers import TFDistilBertForSequenceClassification
-import os
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+# import os
+# os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 app = Flask(__name__)
