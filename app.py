@@ -21,7 +21,7 @@ def analyze_task(task):
 def main():
     print("Inside main")
     # predict_input = new_tokenizer.encode("climate change is man made concept", return_tensors="tf")
-    return jsonify({'Test': "Fuck u"})
+    return jsonify({'Test': "Fuck you"})
 
 
 if __name__ == "__main__":
