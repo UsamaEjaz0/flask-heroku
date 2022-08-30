@@ -8,8 +8,8 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 app = Flask(__name__)
 
 
-newmodel = TFDistilBertForSequenceClassification.from_pretrained("model1")
-new_tokenizer =DistilBertTokenizerFast.from_pretrained('tokenizer1')
+newmodel = TFDistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased',  num_labels=3)
+new_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased')
 
 
 @app.route('/out/<task>', methods=['GET'])
