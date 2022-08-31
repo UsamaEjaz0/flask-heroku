@@ -7,7 +7,6 @@ from transformers import TFDistilBertForSequenceClassification
 
 app = Flask(__name__)
 
-
 newmodel = TFDistilBertForSequenceClassification.from_pretrained('updated_model',  num_labels=3)
 new_tokenizer = DistilBertTokenizerFast.from_pretrained('tokenizer')
 
