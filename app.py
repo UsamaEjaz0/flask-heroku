@@ -4,7 +4,6 @@ from transformers import TFDistilBertForSequenceClassification
 # import os
 # os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-
 app = Flask(__name__)
 
 newmodel = TFDistilBertForSequenceClassification.from_pretrained('updated_model',  num_labels=3)
