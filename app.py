@@ -8,8 +8,8 @@ from transformers import TFDistilBertForSequenceClassification
 app = Flask(__name__)
 
 
-# newmodel = TFDistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased',  num_labels=3)
-# new_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased')
+newmodel = TFDistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased',  num_labels=3)
+new_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased')
 
 
 @app.route('/out/<task>', methods=['GET'])
@@ -20,7 +20,7 @@ def analyze_task(task):
 @app.route('/', methods=['GET'])
 def main():
     print("Inside main")
-    # predict_input = new_tokenizer.encode("climate change is man made concept", return_tensors="tf")
+    predict_input = new_tokenizer.encode("climate change is man made concept", return_tensors="tf")
     return jsonify({'Test': "Fuck you"})
 
 
