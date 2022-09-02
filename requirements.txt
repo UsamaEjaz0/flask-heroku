@@ -1,7 +1,5 @@
-pytorch
-transformers==3.0.2
-numpy==1.19.1
-flask
-joblib==0.16.0
-sentencepiece==0.1.91
-urllib3==1.25.10
+Flask==2.2.2
+gunicorn==20.1.0
+tensorflow-cpu
+transformers
+protobuf==3.20.*
