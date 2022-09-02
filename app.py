@@ -20,14 +20,7 @@ def analyze_task(task):
 
 @app.route('/', methods=['GET'])
 def main():
-    print("Inside main")
-    # predict_input = new_tokenizer.encode("climate change is man made concept", return_tensors="tf")
     prediction = classifier("Climate change is real", )
-    # prediction = qa_pipeline({
-    #     'context': "Manuel Romero has been working hardly in the repository hugginface/transformers lately",
-    #     'question': "Who has been working hard for hugginface/transformers lately?"
-    #
-    # })
     return jsonify({'Test': str(prediction)})
 
 
