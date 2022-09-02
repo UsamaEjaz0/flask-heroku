@@ -7,12 +7,7 @@ from transformers import pipeline
 # os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 app = Flask(__name__)
-classifier = pipeline("text-classification",model='M-FAC/bert-tiny-finetuned-sst2', return_all_scores=True)
-# qa_pipeline = pipeline(
-#     "question-answering",
-#     model="mrm8488/bert-small-finetuned-squadv2",
-#     tokenizer="mrm8488/bert-small-finetuned-squadv2"
-# )
+classifier = pipeline("text-classification", model='philschmid/tiny-bert-sst2-distilled', return_all_scores=True)
 
 
 # newmodel = TFDistilBertForSequenceClassification.from_pretrained('updated_model',  num_labels=3)
