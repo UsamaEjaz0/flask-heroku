@@ -12,7 +12,6 @@ classifier = pipeline("text-classification",model='distilbert-base-uncased-finet
 # newmodel = TFDistilBertForSequenceClassification.from_pretrained('updated_model',  num_labels=3)
 # new_tokenizer = DistilBertTokenizerFast.from_pretrained('tokenizer')
 
-
 @app.route('/out/<task>', methods=['GET'])
 def analyze_task(task):
     return jsonify({'Test': task})
